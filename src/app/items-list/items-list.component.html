@@ -1,0 +1,22 @@
+<div class="container">
+    <div *ngFor="let product of productsList" class="card horizontal">
+        <div class="card-image">
+            <img src={{product.img}}>
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <ul>
+                    <li><span>Name:</span> {{product.name}}</li>
+                    <li><span>Brand:</span> {{product.brand}}</li>
+                    <li><span>Price:</span> {{product.price}} {{product.currency}}</li>
+                    <li><span>Asin:</span> {{product.asin}}</li>
+                    <li><span>Weight:</span> {{product.weight}}</li>
+                </ul>
+            </div>
+            <div class="card-action">
+                <a href={{product.link}} target="_blank">Link</a>
+            </div>
+        </div>
+    </div>
+    <p *ngFor="let item of entriesList">{{item}}</p>
+</div>
